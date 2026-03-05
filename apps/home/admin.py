@@ -1,5 +1,10 @@
 from django.contrib import admin
-from apps.home.models import HomeTitle, HowItWorks, LatestNews, NeedSupport, OurSuccess
+from apps.home.models import HomeTitle, HowItWorks, LatestNews, NeedSupport, OurSuccess,Banner
+
+
+@admin.register(Banner)
+class BannerAdmin(admin.ModelAdmin):
+    list_display = ('title', 'description')
 
 @admin.register(HomeTitle)
 class HomeTitleAdmin(admin.ModelAdmin):
